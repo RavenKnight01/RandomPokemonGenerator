@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Random Pokémon Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Pixel&family=Playpen+Sans+Hebrew:wght@100..800&family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="title">
+        Random Pokémon Generator
+    </div>
+
+    <div class="subtitle">
+        by Raven
+    </div>
+
+    <div class="subtitle">
+        * Updated through Generation IX
+    </div>
+
+    <!-- ========================= -->
+    <!-- TYPE FILTER -->
+    <!-- ========================= -->
+
+    <div class="filter-box">
+
+        <h2>Type Filter</h2>
+
+        <label class="radio-option">
+            <input
+                type="radio"
+                name="typeMode"
+                value="random"
+                checked
+            >
+            Completely Random
+        </label>
+
+        <label class="radio-option">
+            <input
+                type="radio"
+                name="typeMode"
+                value="filter"
+            >
+            Filter by Type
+        </label>
+
+        <div class="type-select-container">
+
+            <label for="typeSelect">
+                Pokémon Type
+            </label>
+
+            <select id="typeSelect" disabled>
+
+                <option value="">Choose a Type</option>
+
+                <option value="normal">Normal</option>
+                <option value="fire">Fire</option>
+                <option value="water">Water</option>
+                <option value="grass">Grass</option>
+                <option value="electric">Electric</option>
+                <option value="ice">Ice</option>
+                <option value="fighting">Fighting</option>
+                <option value="poison">Poison</option>
+                <option value="ground">Ground</option>
+                <option value="flying">Flying</option>
+                <option value="psychic">Psychic</option>
+                <option value="bug">Bug</option>
+                <option value="rock">Rock</option>
+                <option value="ghost">Ghost</option>
+                <option value="dragon">Dragon</option>
+                <option value="dark">Dark</option>
+                <option value="steel">Steel</option>
+                <option value="fairy">Fairy</option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- GENERATOR -->
+    <!-- ========================= -->
+
+    <div class="button-container">
+        <button onclick="generatePokemonWithAnimation(0)">
+            Base
+        </button>
+        <span class="number" id="num0"></span>
+    </div>
+
+    <div class="button-container">
+        <button onclick="generatePokemonWithAnimation(1)">
+            Ears
+        </button>
+        <span class="number" id="num1"></span>
+    </div>
+
+    <div class="button-container">
+        <button onclick="generatePokemonWithAnimation(2)">
+            Tail
+        </button>
+        <span class="number" id="num2"></span>
+    </div>
+
+    <div class="button-container">
+        <button onclick="generatePokemonWithAnimation(3)">
+            Head Accessory
+        </button>
+        <span class="number" id="num3"></span>
+    </div>
+
+    <div class="button-container">
+        <button onclick="generatePokemonWithAnimation(4)">
+            Neck Accessory
+        </button>
+        <span class="number" id="num4"></span>
+    </div>
+
+    <div class="button-container">
+        <button onclick="generatePokemonWithAnimation(5)">
+            Leg Accessory
+        </button>
+        <span class="number" id="num5"></span>
+    </div>
+
+    <div class="button-container">
+        <button onclick="generatePokemonWithAnimation(6)">
+            Small Decoration
+        </button>
+        <span class="number" id="num6"></span>
+    </div>
+
+    <div class="button-container">
+        <button onclick="generatePokemonWithAnimation(7)">
+            Color
+        </button>
+        <span class="number" id="num7"></span>
+    </div>
+
+    <div class="button-container">
+        <button onclick="generateExtraWithAnimation(8)">
+            Extra
+        </button>
+        <span class="number" id="num8"></span>
+    </div>
+
+</div>
+
+<!-- ========================================= -->
+<!-- DATA -->
+<!-- ========================================= -->
+
+<script src="data/base.js"></script>
+<script src="data/ears.js"></script>
+<script src="data/tail.js"></script>
+<script src="data/headAccessory.js"></script>
+<script src="data/neckAccessory.js"></script>
+<script src="data/legAccessory.js"></script>
+<script src="data/smallDecoration.js"></script>
+<script src="data/colors.js"></script>
+<script src="data/extras.js"></script>
+
+<!-- ========================================= -->
+<!-- APPLICATION -->
+<!-- ========================================= -->
+
+<script src="pokemon-api.js"></script>
+<script src="cache.js"></script>
+<script src="generator.js"></script>
+<script src="ui.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
